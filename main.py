@@ -29,6 +29,6 @@ sorted_colons_array = [
     [number_array[row_i][col_i] for col_i in indexes_sorted_columns]
     for row_i in range(len(number_array))
 ]
-print("\nНовий масив:")
+print("\nНовий масив, за зростанням сумми чисел у колонці:")
 for row in sorted_colons_array:
     print(row)
