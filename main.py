@@ -19,17 +19,16 @@ for column in column_arrays:
     column_sum = sum(column)
     print(column, "sum = ", column_sum)
 
+# Сортуємо індекси колонок за сумами чисел
 column_sums = [sum(column) for column in column_arrays]
-
-# Сортуємо індекси колонок за їх сумами
-indexes_sorted_columns = sorted(range(columns_count), key=lambda i: column_sums[i])
+indexes_sorted_columns = sorted(enumerate(column_sums), reverse=True)
+indexes_sorted_columns = [index for index, _ in indexes_sorted_columns]
 
 # Створюємо новий відсортований масив
 sorted_colons_array = [
     [number_array[row_i][col_i] for col_i in indexes_sorted_columns]
     for row_i in range(len(number_array))
 ]
-
 print("\nНовий масив:")
 for row in sorted_colons_array:
     print(row)
