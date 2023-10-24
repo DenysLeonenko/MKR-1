@@ -25,10 +25,10 @@ sorted_columns = sorted(enumerate(column_sums), reverse=True)
 indexes_sorted_columns = [index for index, _ in sorted_columns]
 
 # Створюємо новий відсортований масив
-sorted_colons_array = [
+sorted_columns_array = [
     [number_array[row_i][col_i] for col_i in indexes_sorted_columns]
     for row_i in range(len(number_array))
 ]
 print("\nНовий масив, за зростанням сумми чисел у колонці:")
-for row in sorted_colons_array:
+for row in sorted_columns_array:
     print(row)
