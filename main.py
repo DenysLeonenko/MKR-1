@@ -21,8 +21,8 @@ for column in column_arrays:
 
 # Сортуємо індекси колонок за сумами чисел
 column_sums = [sum(column) for column in column_arrays]
-indexes_sorted_columns = sorted(enumerate(column_sums), reverse=True)
-indexes_sorted_columns = [index for index, _ in indexes_sorted_columns]
+sorted_columns = sorted(enumerate(column_sums), reverse=True)
+indexes_sorted_columns = [index for index, _ in sorted_columns]
 
 # Створюємо новий відсортований масив
 sorted_colons_array = [
